@@ -27,7 +27,7 @@ class SecondActivity : AppCompatActivity() {
         val btnSubmit: Button = findViewById(R.id.btnSubmit)
 
 
-        //Event OnClick, saat ditekan akan mengeluarkan pop up
+        //Event OnClick, saat ditekan akan mengeluarkan pop up bahwa tombol; sudah di klik
         btnSubmit.setOnClickListener {
             //Mengambil value dari inputNama dan menampilkan di Logcat
             val nama = inputNama.text
