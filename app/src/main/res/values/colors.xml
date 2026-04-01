@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="bg">#DB8FC6</color>
+    <color name="tombol">#924378</color>
+
 </resources>
+<!--agar warna aplikasi menjadi konsisten-->

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C33535"
+    android:background="@color/bg"
     tools:context=".pertemuan_3.ThirdActivity">
 
     <Button
@@ -13,8 +13,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="104dp"
-        android:backgroundTint="@color/black"
+        android:layout_marginTop="72dp"
+        android:backgroundTint="@color/tombol"
+        android:fontFamily="@font/tegaksambung"
         android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -23,27 +24,39 @@
 
     <EditText
         android:id="@+id/inputNoTujuan"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="268dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
+        android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:textSize="40dp"
-        android:textStyle="italic"
-        android:letterSpacing="0.4"
+        android:layout_width="327dp"
+        android:layout_height="123dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/tegaksambung"
         android:gravity="center"
-        android:layout_height="wrap_content"
-        android:text="TextView"
+        android:letterSpacing="0.4"
+        android:text="@string/judul"
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="47dp" />
+        android:textSize="30dp"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="112dp"
+        android:layout_height="148dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/smartphone"
+        tools:layout_editor_absoluteY="31dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

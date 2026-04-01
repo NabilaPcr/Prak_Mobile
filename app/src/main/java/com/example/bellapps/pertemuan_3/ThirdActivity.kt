@@ -1,9 +1,11 @@
 package com.example.bellapps.pertemuan_3
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -36,6 +38,10 @@ class ThirdActivity : AppCompatActivity() {
 
             Toast.makeText(this, "Anda telah melakukan klik pada tombol Submit", Toast.LENGTH_SHORT)
                 .show()
+
+            val intent = Intent(this, ThirdResultActivity::class.java)
+            startActivity(intent) //wajib ada start seperti disamping
+//            gunanya intent adalah untuk memindahkan activity ini ke activity lain
 
         }
 

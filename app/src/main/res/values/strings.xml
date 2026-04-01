@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Bell Apps</string>
+    <string name="judul">Halaman Kirim</string>
+    <string name="judulBaru">Kode Berhasil Dikirim!</string>
+    <string name="tag">Silahkan Periksa Nomor Anda</string>
+
 </resources>
