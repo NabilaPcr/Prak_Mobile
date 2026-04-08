@@ -13,6 +13,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.bellapps.R
 import com.example.bellapps.databinding.ActivityThirdBinding
+import com.example.bellapps.pertemuan_4.FourthActivity
 
 class ThirdActivity : AppCompatActivity() {
     private lateinit var binding: ActivityThirdBinding  //usahakan ada ini setiap menggunakan binding
@@ -26,10 +27,7 @@ class ThirdActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        //val inputNomor: EditText = findViewById(R.id.inputNoTujuan)
-        //val btnKirim: Button = findViewById(R.id.btnKirim)
-        //karena sudah ada binding, jadi 2 variabel diatas sudah tidak diperlukan, cukup menambahkan binding.
-        // pada btnKirim dan value dari nomor
+
 
         binding.btnKirim.setOnClickListener {
             //Mengambil value dari inputNama dan menampilkan di Logcat
