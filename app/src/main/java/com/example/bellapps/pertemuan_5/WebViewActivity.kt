@@ -1,0 +1,63 @@
+package com.example.bellapps.pertemuan_5
+
+import android.os.Bundle
+import android.webkit.WebViewClient
+import androidx.appcompat.app.AppCompatActivity
+import com.example.bellapps.R
+import com.example.bellapps.databinding.ActivityWebViewBinding
+
+class WebViewActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityWebViewBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityWebViewBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        // 1. Mengaktifkan toolbar
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.apply {
+            title = "Web Merdeka"
+            setDisplayHomeAsUpEnabled(true)
+            setDisplayShowHomeEnabled(true)
+
+            // Menerapkan icon kustom untuk tombol back di toolbar
+            // Pastikan ic_arrow_back sudah ada di folder res/drawable
+            setHomeAsUpIndicator(R.drawable.ic_arrow)
+        }
+
+        // 2. Konfigurasi WebView
+        binding.webView.webViewClient = WebViewClient()
+        binding.webView.settings.javaScriptEnabled = true
+        binding.webView.loadUrl("https://merdeka.com")
+
+        // 3. Agar Toolbar hide/show saat scroll web
+        binding.webView.setOnScrollChangeListener { _, _, scrollY, _, oldScrollY ->
+            if (scrollY > oldScrollY) {
+                binding.appBar.setExpanded(false, true) // sembunyikan toolbar
+            } else if (scrollY < oldScrollY) {
+                binding.appBar.setExpanded(true, true) // tampilkan toolbar
+            }
+        }
+    }
+
+    // 4. Mengaktifkan navigasi tombol 'Back' di Toolbar (panah kiri atas)
+    override fun onSupportNavigateUp(): Boolean {
+        if (binding.webView.canGoBack()) {
+            binding.webView.goBack()
+        } else {
+            finish()
+        }
+        return true
+    }
+
+    // 5. Mengambil alih fungsi tombol back fisik/gesture HP
+    // Abaikan garis merah (deprecated), fungsi tetap berjalan normal
+    override fun onBackPressed() {
+        if (binding.webView.canGoBack()) {
+            binding.webView.goBack()
+        } else {
+            super.onBackPressed()
+        }
+    }
+}
