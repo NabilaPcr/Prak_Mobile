@@ -20,9 +20,6 @@ class WebViewActivity : AppCompatActivity() {
             title = "Web Merdeka"
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
-
-            // Menerapkan icon kustom untuk tombol back di toolbar
-            // Pastikan ic_arrow_back sudah ada di folder res/drawable
             setHomeAsUpIndicator(R.drawable.ic_arrow)
         }
 
