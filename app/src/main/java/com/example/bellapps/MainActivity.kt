@@ -2,20 +2,15 @@ package com.example.bellapps
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.bellapps.databinding.ActivityFourthBinding
 import com.example.bellapps.databinding.ActivityMainBinding
-import com.example.bellapps.databinding.ActivityThirdBinding
-import com.example.bellapps.pertemuan_3.ThirdActivity
-import com.example.bellapps.pertemuan_3.ThirdResultActivity
-import com.example.bellapps.pertemuan_4.FourthActivity
-import com.example.bellapps.pertemuan_5.FifthActivity
-import com.example.bellapps.pertemuan_7.SevenActivity
+import com.example.bellapps.Home.pertemuan_3.ThirdActivity
+import com.example.bellapps.Home.pertemuan_4.FourthActivity
+import com.example.bellapps.Home.pertemuan_5.FifthActivity
+import com.example.bellapps.Home.pertemuan_7.SevenActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
@@ -38,7 +33,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ThirdActivity::class.java)
             startActivity(intent)
         }
-
         binding.btnToThird.setOnClickListener {
             val intent = Intent(this, ThirdActivity::class.java)
             startActivity(intent)

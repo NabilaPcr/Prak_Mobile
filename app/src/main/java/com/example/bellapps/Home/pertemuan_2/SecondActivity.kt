@@ -1,4 +1,4 @@
-package com.example.bellapps.pertemuan_2
+package com.example.bellapps.Home.pertemuan_2
 
 import android.os.Bundle
 import android.util.Log

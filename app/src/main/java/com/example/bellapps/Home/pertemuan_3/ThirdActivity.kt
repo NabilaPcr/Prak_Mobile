@@ -1,11 +1,8 @@
-package com.example.bellapps.pertemuan_3
+package com.example.bellapps.Home.pertemuan_3
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -13,7 +10,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.bellapps.R
 import com.example.bellapps.databinding.ActivityThirdBinding
-import com.example.bellapps.pertemuan_4.FourthActivity
 
 class ThirdActivity : AppCompatActivity() {
     private lateinit var binding: ActivityThirdBinding  //usahakan ada ini setiap menggunakan binding
