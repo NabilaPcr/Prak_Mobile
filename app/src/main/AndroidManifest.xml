@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BellApps">
         <activity
+            android:name=".SplashScreenActivity"
+            android:exported="false" />
+        <activity
             android:name=".AuthActivity"
             android:exported="false" />
         <activity
@@ -30,7 +33,7 @@
             android:name=".pertemuan_3.ThirdResultActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".pertemuan_7.SevenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
