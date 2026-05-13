@@ -11,7 +11,7 @@ import androidx.core.view.WindowCompat.enableEdgeToEdge
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.example.bellapps.Home.HomeFragment
-import com.example.bellapps.Message.MessagerFragment
+import com.example.bellapps.Message.MessageFragment
 import com.example.bellapps.More.MoreFragment
 import com.example.bellapps.databinding.ActivityAuthBinding
 import com.example.bellapps.databinding.ActivityBaseBinding
@@ -39,7 +39,7 @@ class BaseActivity : AppCompatActivity() {
                     true
                 }
                 R.id.message -> {
-                    replaceFragment(MessagerFragment())
+                    replaceFragment(MessageFragment())
                     true
                 }
                 R.id.more -> {
