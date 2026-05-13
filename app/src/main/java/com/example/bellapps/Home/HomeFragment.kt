@@ -13,6 +13,7 @@ import com.example.bellapps.Home.pertemuan_3.ThirdActivity
 import com.example.bellapps.Home.pertemuan_4.FourthActivity
 import com.example.bellapps.Home.pertemuan_5.FifthActivity
 import com.example.bellapps.Home.pertemuan_7.SevenActivity
+import com.example.bellapps.Home.pertemuan_9.NinthActivity
 import com.example.bellapps.R
 import com.example.bellapps.databinding.FragmentHomeBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -79,6 +80,10 @@ class HomeFragment : Fragment() {
 
                 }
                 .show()
+        }
+        binding.btnToNinth.setOnClickListener {
+            val intent = Intent(requireContext(), NinthActivity::class.java)
+            startActivity(intent)
         }
     }
 }

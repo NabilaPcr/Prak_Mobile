@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BellApps">
         <activity
+            android:name=".Home.pertemuan_9.NinthActivity"
+            android:exported="false" />
+        <activity
             android:name=".Home.pertemuan_7.SevenActivity"
             android:exported="false"
             android:theme="@style/Theme.BellApps" />
