@@ -7,8 +7,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.bellapps.AuthActivity
+import com.example.bellapps.Data.Api.PhotoApiClient
 import com.example.bellapps.Home.pertemuan_3.ThirdActivity
 import com.example.bellapps.Home.pertemuan_4.FourthActivity
 import com.example.bellapps.Home.pertemuan_5.FifthActivity
@@ -16,7 +20,9 @@ import com.example.bellapps.Home.pertemuan_7.SevenActivity
 import com.example.bellapps.Home.pertemuan_9.NinthActivity
 import com.example.bellapps.databinding.FragmentHomeBinding
 import com.example.bellapps.Home.pertemuan_10.TenthActivity
+import com.example.bellapps.Home.photo.PhotoAdapter
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -29,6 +35,7 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
         }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar)
@@ -89,5 +96,32 @@ class HomeFragment : Fragment() {
             val intent = Intent(requireContext(), TenthActivity::class.java)
             startActivity(intent)
         }
+      loadPhoto()
+    }
+
+//    private fun loadFact() {...}
+
+    private fun loadPhoto() {
+        lifecycleScope.launch {
+            try {
+                val photos = PhotoApiClient.apiService.getPhotos()
+                val adapter = PhotoAdapter(photos)
+                binding.rvGallery.adapter = adapter
+
+                /** List Tampil Vertical*/
+//                binding.rvGallery.layoutManager = LinearLayoutManager(requireContext())
+
+                /** List Tampil Horizontal */
+                binding.rvGallery.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+
+                /** List Tampil Grid */
+                //binding.rvGallery.layoutManager = GridLayoutManager(requireContext(),2)
+
+            } catch (e: Exception) {
+                Toast.makeText(requireContext(), "Gagal memuat gambar", Toast.LENGTH_SHORT).show()
+            }
+        }
+//    }
+
     }
 }
