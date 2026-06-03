@@ -37,6 +37,7 @@ android {
 }
 
 dependencies {
+    implementation("com.tbuonomo:dotsindicator:5.1.0")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation ("com.github.bumptech.glide:glide:4.16.0") //untuk generate gambar
     annotationProcessor ("com.github.bumptech.glide:compiler:4.16.0")
