@@ -20,6 +20,7 @@ import com.example.bellapps.Home.pertemuan_7.SevenActivity
 import com.example.bellapps.Home.pertemuan_9.NinthActivity
 import com.example.bellapps.databinding.FragmentHomeBinding
 import com.example.bellapps.Home.pertemuan_10.TenthActivity
+import com.example.bellapps.Home.pertemuan_13.ThirteenActivity
 import com.example.bellapps.Home.photo.PhotoAdapter
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.coroutines.launch
@@ -94,6 +95,11 @@ class HomeFragment : Fragment() {
         }
         binding.btnToTenth.setOnClickListener {
             val intent = Intent(requireContext(), TenthActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btntoThirteen.setOnClickListener {
+            val intent = Intent(requireContext(), ThirteenActivity::class.java)
             startActivity(intent)
         }
       loadPhoto()
